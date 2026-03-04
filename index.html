@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaYoo Login</title>
+
+    <link rel="icon" href="./assets/icon/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+</head>
+
+<body>
+
+    <section class="mx-auto min-h-screen max-w-md bg-[#F8F8F8]">
+
+        <!-- Logo -->
+        <div class="flex justify-center">
+            <img class="w-40 h-auto mt-40" src="assets/logo/logo.png" alt="PaYoo Logo">
+        </div>
+
+        <!-- Title Part -->
+        <div class="font-semibold p-4 ml-4 mt-12">
+            <h4 class="text-lg">Log In</h4>
+            <h4 class="text-sm text-gray-500">To your PaYoo account</h4>
+        </div>
+
+        <!-- Card section -->
+        <div class="card bg-base-100 w-full max-w-sm shadow-2xl mx-auto mt-12 mb-12">
+            <form class="card-body">
+
+                <!-- Phone Number -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text text-sm font-semibold">Account Number</span>
+                    </label>
+                    <input id="phone-number" type="text" placeholder="Enter Your Number" class="input input-bordered"
+                        required />
+                </div>
+
+                <!-- Pin Number -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text text-sm font-semibold">4 Digit Pin</span>
+                    </label>
+                    <input id="pin-number" type="password" placeholder="Enter Your 4 Digit Pin"
+                        class="input input-bordered" required />
+                    <label class="label">
+                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                    </label>
+                </div>
+                <!-- Lon In Button -->
+                <div class="form-control mt-6">
+                    <button id="login-button" class="btn btn-primary text-lg font-semibold">Login</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Tailwind Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script/logIn.js"></script>
+
+</body>
+
+</html>
