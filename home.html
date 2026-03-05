@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo Home</title>
+
+    <link rel="icon" href="./assets/icon/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Kit  -->
+    <script src="https://kit.fontawesome.com/a7397c5ed9.js" crossorigin="anonymous"></script>
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./stylesheet/styles.css">
 </head>
+
 <body>
-    <h1>This is a home page.....</h1>
-    <button id="logout-button" class="btn btn-warning">Logout</button>
+    <section class="mx-auto min-h-screen max-w-md bg-[#F8F8F8]">
+
+        <!-- Header Section Start -->
+        <header
+            class="bg-white flex justify-between items-center p-4 top-0 z-10 border-b border-b-gray-300">
+            <div class="flex gap-4">
+                <div class="w-[60px]">
+                    <img src="./assets/icon/favicon.png" alt="PaYoo Logo">
+                </div>
+                <div class="font-semibold">
+                    <p class="text-lg">$ <span id="balance">45000</span></p>
+                    <p class="text-sm text-gray-500">Available Balance</p>
+                </div>
+            </div>
+            <div>
+                <!-- <button
+                    class="flex items-center bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
+                    <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                    Log Out
+                </button> -->
+                <button
+                    class="flex items-center gap-2 px-4 py-2 rounded bg-red-100 text-red-600 font-semibold hover:bg-red-200 transition-colors">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log Out
+                </button>
+
+
+            </div>
+        </header>
+        <!-- Header Section End -->
+    </section>
+
+    <!-- Java Script + Tailwind Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script/logIn.js"></script>
 </body>
+
 </html>
