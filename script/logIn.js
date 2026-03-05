@@ -38,6 +38,11 @@ if (loginButton) {
 
 if (logoutButton) {
     logoutButton.addEventListener('click', function () {
-        window.location.replace('./index.html')
+
+        const confirmLogout = confirm('Are you sure want to log out?');
+
+        if (confirmLogout) {
+            window.location.replace('./index.html')
+        }
     });
 }
