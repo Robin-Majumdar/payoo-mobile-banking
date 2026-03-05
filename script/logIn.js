@@ -2,6 +2,7 @@
 
 const loginButton = document.getElementById('login-button');
 const pinNumber = document.getElementById('pin-number');
+const logoutButton = document.getElementById('logout-button');
 
 if (pinNumber && loginButton) {
     pinNumber.addEventListener('input', function () {
@@ -32,5 +33,11 @@ if (loginButton) {
 
         console.log(phoneNumber, pinNumber);
 
+    });
+}
+
+if (logoutButton) {
+    logoutButton.addEventListener('click', function () {
+        window.location.replace('./index.html')
     });
 }
