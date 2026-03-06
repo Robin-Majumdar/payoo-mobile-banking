@@ -32,6 +32,8 @@
                 <div class="w-[60px]">
                     <img src="./assets/favicon/favicon.png" alt="PaYoo Logo">
                 </div>
+
+                <!-- Account Balance Section -->
                 <div class="font-semibold">
                     <p class="text-lg">$ <span id="balance">45000</span></p>
                     <p class="text-sm text-gray-500">Available Balance</p>
@@ -62,13 +64,13 @@
             </div>
             <!-- Interaction Button Section -->
             <section>
-                <div class="grid grid-cols-3 mb-8 gap-4">
+                <div class="grid grid-cols-3 mb-8 mt-4 gap-4">
 
                     <!-- Add Money -->
                     <button class=" text-purple-800 flex flex-col items-center gap-1 px-2 py-3 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
                     hover:bg-purple-200 transition-colors shadow-sm">
                         <img src="./assets/icon/add-money.png" alt="Add Money Icon" class="w-6 h-6">
-                        Add money
+                        Add Money
                     </button>
 
                     <!-- Cash Out -->
@@ -106,8 +108,116 @@
                         Transaction
                     </button>
                 </div>
+
+
             </section>
         </section>
+
+        <!-- Features From Section start -->
+        <section class="p-4">
+            <h2 class="text-xl font-bold text-center">Add Money</h2>
+
+            <!-- Add Money From Start -->
+            <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
+                <form class="card-body">
+
+                    <!-- Select Your Bank -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">Select Bank</span>
+                        </label>
+                        <select class="select select-primary">
+                            <option disabled selected>Select Your Bank</option>
+                            <option>Dutch Bangla Bank</option>
+                            <option>BRAC Bank</option>
+                            <option>Islami Bank</option>
+                            <option>City Bank</option>
+                            <option>Sonali Bank</option>
+                        </select>
+                    </div>
+
+                    <!-- Bank Account Number -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">Bank Account Number</span>
+                        </label>
+                        <input type="text" placeholder="11 Digit Account Number" class="input input-bordered"
+                            required />
+                    </div>
+
+                    <!-- Add Amount -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">Add To Amount</span>
+                        </label>
+                        <input id="phone-number" type="text" placeholder="Add amount to withdraw"
+                            class="input input-bordered" required />
+                    </div>
+
+                    <!-- Pin Number -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">4 Digit Pin</span>
+                        </label>
+                        <input id="pin-number" type="password" placeholder="Enter Your 4 Digit Pin"
+                            class="input input-bordered" required />
+                    </div>
+                    <!-- Add Money Button -->
+                    <div class="form-control mt-6">
+                        <button id=""
+                            class="btn text-white bg-purple-600 hover:bg-purple-700 btn-primary text-lg font-semibold">Add
+                            Money</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Add Money From End -->
+        </section>
+
+        <section class="p-4 hidden">
+            <h2 class="text-xl font-bold text-center">Cash Out</h2>
+
+            <!-- Add Money From Start -->
+            <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
+
+                <form class="card-body">
+
+                    <!-- Phone Number -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">Phone Number</span>
+                        </label>
+                        <input type="text" placeholder="11 Digit Account Number" class="input input-bordered"
+                            required />
+                    </div>
+
+                    <!-- Add Amount -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">Add To Amount</span>
+                        </label>
+                        <input id="phone-number" type="text" placeholder="Add amount to withdraw"
+                            class="input input-bordered" required />
+                    </div>
+
+                    <!-- Pin Number -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-sm font-semibold">4 Digit Pin</span>
+                        </label>
+                        <input id="pin-number" type="password" placeholder="Enter Your 4 Digit Pin"
+                            class="input input-bordered" required />
+                    </div>
+                    <!-- Add Money Button -->
+                    <div class="form-control mt-6">
+                        <button id=""
+                            class="btn text-white bg-purple-600 hover:bg-purple-700 btn-primary text-lg font-semibold">Cash Out</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Add Money From End -->
+        </section>
+
+        <!-- Features From Section End -->
     </section>
 
     <!-- Java Script + Tailwind Script -->
