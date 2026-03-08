@@ -30,9 +30,6 @@ if (loginButton) {
         else {
             alert('Invalid phone number or PIN');
         }
-
-        console.log(phoneNumber, pinNumber);
-
     });
 }
 

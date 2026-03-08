@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo Home</title>
+    <title>PaYoo Home</title>
 
     <link rel="icon" href="./assets/favicon/favicon.png" type="image/png">
 
@@ -35,7 +35,7 @@
 
                 <!-- Account Balance Section -->
                 <div class="font-semibold">
-                    <p class="text-lg">$ <span id="balance">45000</span></p>
+                    <p class="text-lg">$ <span id="account-balance">45000</span></p>
                     <p class="text-sm text-gray-500">Available Balance</p>
                 </div>
             </div>
@@ -45,6 +45,8 @@
                     <i class="fa-solid fa-right-from-bracket mr-2"></i>
                     Log Out
                 </button> -->
+
+                <!-- Log Out Button -->
                 <button id="logout-button"
                     class="flex items-center gap-2 px-4 py-2 rounded bg-red-100 text-red-600 font-semibold hover:bg-red-200 transition-colors">
                     <i class="fa-solid fa-right-from-bracket"></i>
@@ -54,15 +56,16 @@
         </header>
         <!-- Header Section End -->
 
-        <!-- Main Content and Interaction Button -->
+        <!-- Main Content and Interaction Button Start -->
         <section class="bg-white rounded-b-2xl p-4">
             <!-- Text Part -->
             <div class="py-4 space-y-2">
-                <h1 class="text-3xl font-bold">Welcome to <span class="text-purple-600">PaYoo</span> </h1>
+                <h1 class="text-3xl font-bold">Welcome to <span class="text-purple-600 italic">PaYoo</span> </h1>
                 <p class="text-sm text-gray-500">Enjoy easy and convenient financial services with us. <br>
                     Cashout charge is low and</p>
             </div>
-            <!-- Interaction Button Section -->
+
+            <!-- Interaction Button Section Start -->
             <section>
                 <div class="grid grid-cols-3 mb-8 mt-4 gap-4">
 
@@ -111,13 +114,16 @@
 
 
             </section>
+            <!-- Interaction Button Section Start -->
         </section>
+        <!-- Main Content and Interaction Button End -->
 
         <!-- Features From Section start -->
+
+        <!-- Add Money From Start -->
         <section class="p-4">
             <h2 class="text-xl font-bold text-center">Add Money</h2>
 
-            <!-- Add Money From Start -->
             <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
                 <form class="card-body">
 
@@ -126,13 +132,14 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">Select Bank</span>
                         </label>
-                        <select class="select select-primary">
-                            <option disabled selected>Select Your Bank</option>
-                            <option>Dutch Bangla Bank</option>
-                            <option>BRAC Bank</option>
-                            <option>Islami Bank</option>
-                            <option>City Bank</option>
-                            <option>Sonali Bank</option>
+
+                        <select id="select-bank" class="select select-primary">
+                            <option value="" disabled selected>Select Your Bank</option>
+                            <option value="dbbl">Dutch-Bangla Bank</option>
+                            <option value="brac">BRAC Bank</option>
+                            <option value="islami">Islami Bank</option>
+                            <option value="city">City Bank</option>
+                            <option value="sonali">Sonali Bank</option>
                         </select>
                     </div>
 
@@ -141,7 +148,8 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">Bank Account Number</span>
                         </label>
-                        <input type="text" placeholder="11 Digit Account Number" class="input input-bordered"
+                        <input id="bank-account-number" type="text" maxlength="11" inputmode="numeric"
+                            pattern="[0-9]{11}" placeholder="11 Digit Account Number" class="input input-bordered"
                             required />
                     </div>
 
@@ -150,8 +158,8 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">Add To Amount</span>
                         </label>
-                        <input id="phone-number" type="text" placeholder="Add amount to withdraw"
-                            class="input input-bordered" required />
+                        <input id="input-add-money" type="text" placeholder="Add amount" class="input input-bordered"
+                            required />
                     </div>
 
                     <!-- Pin Number -->
@@ -159,12 +167,12 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">4 Digit Pin</span>
                         </label>
-                        <input id="pin-number" type="password" placeholder="Enter Your 4 Digit Pin"
+                        <input id="input-pin-number" type="password" placeholder="Enter Your 4 Digit Pin"
                             class="input input-bordered" required />
                     </div>
                     <!-- Add Money Button -->
                     <div class="form-control mt-6">
-                        <button id=""
+                        <button id="add-money-button"
                             class="btn text-white bg-purple-600 hover:bg-purple-700 btn-primary text-lg font-semibold">Add
                             Money</button>
                     </div>
@@ -172,11 +180,12 @@
             </div>
             <!-- Add Money From End -->
         </section>
+        <!-- Add Money From End -->
 
+        <!-- Cash Out From Start -->
         <section class="p-4 hidden">
             <h2 class="text-xl font-bold text-center">Cash Out</h2>
 
-            <!-- Add Money From Start -->
             <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
 
                 <form class="card-body">
@@ -184,19 +193,18 @@
                     <!-- Phone Number -->
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text text-sm font-semibold">Phone Number</span>
+                            <span class="label-text text-sm font-semibold">Agent Number</span>
                         </label>
-                        <input type="text" placeholder="11 Digit Account Number" class="input input-bordered"
-                            required />
+                        <input type="text" placeholder="11 Digit Number" class="input input-bordered" required />
                     </div>
 
                     <!-- Add Amount -->
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text text-sm font-semibold">Add To Amount</span>
+                            <span class="label-text text-sm font-semibold">Cash Out Amount</span>
                         </label>
-                        <input id="phone-number" type="text" placeholder="Add amount to withdraw"
-                            class="input input-bordered" required />
+                        <input id="" type="text" placeholder="Add amount to withdraw" class="input input-bordered"
+                            required />
                     </div>
 
                     <!-- Pin Number -->
@@ -204,25 +212,41 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">4 Digit Pin</span>
                         </label>
-                        <input id="pin-number" type="password" placeholder="Enter Your 4 Digit Pin"
-                            class="input input-bordered" required />
+                        <input id="" type="password" placeholder="Enter Your 4 Digit Pin" class="input input-bordered"
+                            required />
                     </div>
-                    <!-- Add Money Button -->
+                    <!-- Cash Out Button -->
                     <div class="form-control mt-6">
                         <button id=""
-                            class="btn text-white bg-purple-600 hover:bg-purple-700 btn-primary text-lg font-semibold">Cash Out</button>
+                            class="btn text-white bg-purple-600 hover:bg-purple-700 btn-primary text-lg font-semibold">Cash
+                            Out</button>
                     </div>
                 </form>
             </div>
             <!-- Add Money From End -->
         </section>
+        <!-- Cash Out From End -->
 
+        <!-- Transaction History Section Start -->
+        <section class="p-4 hidden">
+            <h2 class="text-xl font-bold text-center">Transaction History</h2>
+
+            <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
+                
+            </div>
+            <!-- Add Money From End -->
+        </section>
+        <!-- Transaction History Section End -->
         <!-- Features From Section End -->
+
+
     </section>
 
     <!-- Java Script + Tailwind Script -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script/logIn.js"></script>
+    <script src="./script/functuon.js"></script>
+    <script src="./script/add-money.js"></script>
 </body>
 
 </html>
