@@ -1,3 +1,12 @@
+document.getElementById("bank-account-number")
+    .addEventListener('input', function () {
+
+        this.value = this.value.replace(/\D/g, "");
+
+        if (this.value.length > 11) {
+            this.value = this.value.slice(0, 11);
+        }
+    });
 
 document.getElementById('add-money-button')
     .addEventListener('click', function (event) {
