@@ -33,6 +33,7 @@ if (loginButton) {
     });
 }
 
+// Log out function
 if (logoutButton) {
     logoutButton.addEventListener('click', function () {
 

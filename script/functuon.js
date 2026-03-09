@@ -14,3 +14,18 @@ function getTextFiledValue(id) {
     const textNumber = parseFloat(textValue);
     return textNumber;
 }
+
+// Show section function
+const sections = [
+    'add-money-from',
+    'cash-out-from',
+    'transaction-history'
+];
+
+const showSection = (id) => {
+    sections.forEach(sectionId =>
+        document.getElementById(sectionId).classList.add('hidden')
+    );
+
+    document.getElementById(id).classList.remove('hidden');
+};

@@ -62,7 +62,7 @@
             <div class="py-4 space-y-2">
                 <h1 class="text-3xl font-bold">Welcome to <span class="text-purple-600 italic">PaYoo</span> </h1>
                 <p class="text-sm text-gray-500">Enjoy easy and convenient financial services with us. <br>
-                    Cashout charge is low and</p>
+                    Cash out charge is low.</p>
             </div>
 
             <!-- Interaction Button Section Start -->
@@ -70,14 +70,14 @@
                 <div class="grid grid-cols-3 mb-8 mt-4 gap-4">
 
                     <!-- Add Money -->
-                    <button class=" text-purple-800 flex flex-col items-center gap-1 px-2 py-3 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
+                    <button id="show-add-money-section" class="nav-btn text-purple-800 flex flex-col items-center gap-1 px-2 py-3 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
                     hover:bg-purple-200 transition-colors shadow-sm">
                         <img src="./assets/icon/add-money.png" alt="Add Money Icon" class="w-6 h-6">
                         Add Money
                     </button>
 
                     <!-- Cash Out -->
-                    <button class=" text-purple-800 flex flex-col items-center gap-1 px-2 py-3 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
+                    <button id="show-cash-out-section" class="nav-btn text-purple-800 flex flex-col items-center gap-1 px-2 py-3 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
                     hover:bg-purple-200 transition-colors shadow-sm">
                         <img src="./assets/icon/cash-out.png" alt="cash Out Icon" class="w-6 h-6">
                         Cash Out
@@ -105,14 +105,12 @@
                     </button>
 
                     <!-- Transaction History -->
-                    <button class=" text-purple-800 flex flex-col items-center gap-1 px-2 py-2 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
+                    <button id="show-transaction-history" class="nav-btn text-purple-800 flex flex-col items-center gap-1 px-2 py-2 text-sm font-semibold rounded-lg border border-purple-300 hover:border-purple-400 bg-purple-100
                     hover:bg-purple-200 transition-colors shadow-sm">
                         <img src="./assets/icon/transaction.png" alt="Transaction History Icon" class="w-6 h-6">
                         Transaction
                     </button>
                 </div>
-
-
             </section>
             <!-- Interaction Button Section Start -->
         </section>
@@ -121,7 +119,7 @@
         <!-- Features From Section start -->
 
         <!-- Add Money From Start -->
-        <section class="p-4">
+        <section id="add-money-from" class="p-4">
             <h2 class="text-xl font-bold text-center">Add Money</h2>
 
             <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
@@ -183,7 +181,7 @@
         <!-- Add Money From End -->
 
         <!-- Cash Out From Start -->
-        <section class="p-4 hidden">
+        <section id="cash-out-from" class="p-4 hidden">
             <h2 class="text-xl font-bold text-center">Cash Out</h2>
 
             <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
@@ -228,7 +226,7 @@
         <!-- Cash Out From End -->
 
         <!-- Transaction History Section Start -->
-        <section class="p-4 hidden">
+        <section id="transaction-history" class="p-4 hidden">
             <h2 class="text-xl font-bold text-center">Transaction History</h2>
 
             <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
@@ -247,6 +245,7 @@
     <script src="./script/logIn.js"></script>
     <script src="./script/functuon.js"></script>
     <script src="./script/add-money.js"></script>
+    <script src="./script/features.js"></script>
 </body>
 
 </html>
