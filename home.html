@@ -193,7 +193,8 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">Agent Number</span>
                         </label>
-                        <input type="text" placeholder="11 Digit Number" class="input input-bordered" required />
+                        <input id="agent-number" maxlength="11" inputmode="numeric" pattern="[0-9]{11}" type="text"
+                            placeholder="11 Digit Number" class="input input-bordered" required />
                     </div>
 
                     <!-- Add Amount -->
@@ -201,8 +202,8 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">Cash Out Amount</span>
                         </label>
-                        <input id="" type="text" placeholder="Add amount to withdraw" class="input input-bordered"
-                            required />
+                        <input id="input-cash-out" inputmode="numeric" type="text" placeholder="Add amount to withdraw"
+                            class="input input-bordered" required />
                     </div>
 
                     <!-- Pin Number -->
@@ -210,12 +211,12 @@
                         <label class="label">
                             <span class="label-text text-sm font-semibold">4 Digit Pin</span>
                         </label>
-                        <input id="" type="password" placeholder="Enter Your 4 Digit Pin" class="input input-bordered"
-                            required />
+                        <input id="input-cash-out-pin" inputmode="numeric" type="password"
+                            placeholder="Enter Your 4 Digit Pin" class="input input-bordered" required />
                     </div>
                     <!-- Cash Out Button -->
                     <div class="form-control mt-6">
-                        <button id=""
+                        <button id="cash-out-button"
                             class="btn text-white bg-purple-600 hover:bg-purple-700 btn-primary text-lg font-semibold">Cash
                             Out</button>
                     </div>
@@ -230,7 +231,7 @@
             <h2 class="text-xl font-bold text-center">Transaction History</h2>
 
             <div class="card bg-base-100 w-full max-w-md shadow-2xl mx-auto mt-6">
-                
+
             </div>
             <!-- Add Money From End -->
         </section>
@@ -246,6 +247,7 @@
     <script src="./script/functuon.js"></script>
     <script src="./script/add-money.js"></script>
     <script src="./script/features.js"></script>
+    <script src="./script/cash-out.js"></script>
 </body>
 
 </html>

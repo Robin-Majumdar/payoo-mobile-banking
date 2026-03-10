@@ -40,7 +40,7 @@ document.getElementById('add-money-button')
             return;
         }
 
-        if (isNaN(addMoney)) {
+        if (isNaN(addMoney) || addMoney <= 0) {
             alert('Please input your valid amount.')
             return;
         }
