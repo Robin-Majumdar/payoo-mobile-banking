@@ -48,6 +48,30 @@ document.getElementById('add-money-button')
         if (pinNumber === 1234) {
             const newBalance = accountBalance + addMoney;
             document.getElementById('account-balance').innerText = newBalance;
+
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString();
+
+            const transactionHistory = document.getElementById('history');
+            const newTransaction = document.createElement('div');
+
+            newTransaction.innerHTML = `
+                <div class="bg-gray-200 flex items-center p-4 gap-4 rounded-xl">
+                            <div class="bg-[#F4F5F7] p-2 rounded-full">
+                                <img src="./assets/icon/add-money.png" alt="Add money icon">
+                            </div>
+                    <div>
+                        <p class="text-sm">
+                        Add Money: <strong>${addMoney} Tk</strong> from ${bankName} (A/C ${bankAccountNumber})
+                        </p>
+                        <p class="text-xs">
+                        Balance: <strong>${newBalance} Tk</strong> • ${date} at ${time}
+                        </p>
+                    </div>
+                </div>`;
+                
+            transactionHistory.prepend(newTransaction);
         }
         else {
             alert('Add money failed please try again!')
